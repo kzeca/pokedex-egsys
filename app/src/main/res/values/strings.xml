@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Pokedex</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="first_page" >What`s the point of “catch `em all” if you don’t know who are “ `em ” ?</string>
+    <string name="second_page">For that, count on me, the pokedex!
+         Your application that lists and filters by name and type.
+         Don`t forget the option to choose a pokemon randomly (good for you to learn about “ `em ” :V)</string>
+    <string name="third_page">Remember, you “gotta catch `em all” , while I show “ `em all”</string>
+</resources>
