@@ -47,8 +47,7 @@ Vá para [Releases](https://github.com/skydoves/Pokedex/releases) e baixe o últ
 - De Caso de Uso: 
 ![useCase](./assets/userCaseDiagram.png)
 <br>
-- De Atividade: 
-![activity](./assets/activityDiagram.png)
+  - De Atividade: <a href="https://drive.google.com/file/d/1ZvfoPvWFJKk12Gt8XKiEaiKoV7kpDnta/view?usp=sharing">Link</a>
 
 ## Architecture
 Pokedex-egsys é baseado na arquitetura MVVM. Segue o padrão:
