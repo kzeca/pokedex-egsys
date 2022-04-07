@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.details.DetailsActivity"
-    android:background="#f2f2f2">
+    android:background="@color/white">
 
     <TextView
         android:id="@+id/txtName"
@@ -26,6 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:textColorHint="@color/gray"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:text="#invalid"
@@ -39,6 +40,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:textColorHint="@color/gray"
         android:text="Type(s): noType"
         android:textColor="#474747"
         android:textSize="14sp"
