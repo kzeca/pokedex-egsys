@@ -10,8 +10,14 @@ import com.egsys.pokedex.R
 import com.egsys.pokedex.ui.filter.type.FilterTypeActivity
 import kotlinx.android.synthetic.main.activity_filter.*
 
+/**
+ * View da FilterPage
+ */
 class FilterActivity : AppCompatActivity() {
 
+    /**
+     * Correlaciona a View Model da FilterPage
+     */
     private lateinit var viewModel: FilterViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,6 +27,9 @@ class FilterActivity : AppCompatActivity() {
         initUI()
     }
 
+    /**
+     * Iniciar UI
+     */
     private fun initUI() {
         rvTypeList.layoutManager = LinearLayoutManager(this)
         rvTypeList.adapter = TypesListAdapter{
@@ -36,6 +45,9 @@ class FilterActivity : AppCompatActivity() {
 
     }
 
+    /**
+     * Função que configura o ViewModel com o observer
+     */
     private fun setViewModel() {
         viewModel.getTypesList()
         viewModel.typeList.observe(this, Observer {

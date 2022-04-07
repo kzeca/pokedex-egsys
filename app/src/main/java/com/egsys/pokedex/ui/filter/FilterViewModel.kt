@@ -11,13 +11,31 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
+/**
+ * ViewModel da FilterPage
+ */
 class FilterViewModel(): ViewModel() {
+
+    /**
+     * Variavel referenciando a biblioteca Retrofit, necessária para fazer as
+     * solicitações http para a API
+     */
     private val retrofit = Retrofit.Builder().baseUrl("https://pokeapi.co/api/v2/")
         .addConverterFactory(GsonConverterFactory.create())
         .build()
+    /**
+     * Variavel referenciando o service da aplicação na camada de Model
+     */
     private val service: PokemonApiService = retrofit.create(PokemonApiService::class.java)
+
+    /**
+     * Implementação do LiveData
+     */
     val typeList = MutableLiveData<List<PokemonTypesResult>>()
 
+    /**
+     * Função direcionada para pegar os tipos pokemons da API
+     */
     fun getTypesList(){
         val serviceCall = service.getTypes(18, 0)
         serviceCall.enqueue(object: Callback<PokemonTypesResponse>{

@@ -11,6 +11,10 @@ import com.egsys.pokedex.ui.splash.onboarding.pages.SecondPageFragment
 import com.egsys.pokedex.ui.splash.onboarding.pages.ThirdPageFragment
 import kotlinx.android.synthetic.main.fragment_view_pager.view.*
 
+/**
+ * Fragment da viewPager, onde delimita-se as 3 ViewPages
+ * de apresentação do SlideShow
+ */
 class ViewPagerFragment : Fragment() {
 
     override fun onCreateView(

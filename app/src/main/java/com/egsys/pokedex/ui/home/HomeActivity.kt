@@ -12,30 +12,49 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.egsys.pokedex.R
 import com.egsys.pokedex.ui.details.DetailsActivity
 import com.egsys.pokedex.ui.filter.FilterActivity
-import com.egsys.pokedex.ui.home.search.BottomSearchFragment
+import com.egsys.pokedex.ui.home.search.SearchFragment
 import kotlinx.android.synthetic.main.activity_home.*
 
+/**
+ * View da HomePage
+ */
 class HomeActivity : AppCompatActivity() {
 
+    /**
+     * Referencia da animação personalizada que surge do botão. Do botão para cima
+     */
     private val fromBtn: Animation by lazy { AnimationUtils.loadAnimation(this, R.anim.from_button)}
+
+    /**
+     * Referencia da animação personalizada que vai ao botão. De cima ao botão
+     */
     private val toBtn: Animation by lazy { AnimationUtils.loadAnimation(this, R.anim.to_button)}
 
+    /**
+     * Valor booleano usado para indicar se o FlatButton teve sua ação de clique
+     * ou não
+     */
     private var clicked = false
 
-    // todo: declarar vm
+    /**
+     * Referenciando o View Model da HomeActivity(View)
+     */
     private lateinit var viewModel: HomeViewModel
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        // todo: Inicializar VM
         viewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
 
         initUI()
-
     }
 
+    /**
+     * Função direcionada para montar view, chamando o
+     * PokemonListAdapter para formar o *RecyclerView*
+     */
     private fun initUI() {
 
         rvPokemonList.layoutManager = LinearLayoutManager(this)
@@ -48,17 +67,23 @@ class HomeActivity : AppCompatActivity() {
         buttonsClicked()
     }
 
+    /**
+     * View Model settando o ViewModel, onde é chamado *getPokemonList()* para
+     * dispor todos os pokemons gerados pela API, enquanto o observer serve para, caso
+     * a lista sofra qualquer tipo de alteração o RecyclerView seja devidamente atualizado
+     */
     private fun setViewModel() {
-        // todo: Solicitar Lista
         viewModel.getPokemonList()
-
-        // todo: Observar se a lista mudar
         viewModel.pokemonList.observe(this, Observer {
                 list -> (rvPokemonList.adapter as PokemonListAdapter).setData(list)
         })
 
     }
 
+
+    /**
+     * Função que verifica se algum botão dessa activity foi acionado
+     */
     private fun buttonsClicked() {
         btnMenu.setOnClickListener {
             onMenuButtonClicked()
@@ -74,24 +99,42 @@ class HomeActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * Função acionada toda vez que o FloatActionButton da opção de selecionar
+     * randomicamente pokemons é acionada. Aqui, é selecionada a Intent para
+     * DetailsActivity que leva de em um putExtra um número randômico de 1 a 200
+     * que vai ser o id referenciando o pokemon randomicamente escolhido
+     */
     private fun randomPokemonChoose() {
 
         val i = Intent(this, DetailsActivity::class.java)
-        i.putExtra("pokemon", (0..101).random())
+        i.putExtra("pokemon", (0..201).random())
         startActivity(i)
     }
 
+    /**
+     * Função acionada toda vez que o FloatActionButton da opção de filtrar por
+     * tipo ativado. Aqui, uma Intent chama o FilterActivity
+     */
     private fun filterActivity() {
         val i = Intent(this, FilterActivity::class.java)
         startActivity(i)
     }
 
+    /**
+     * Função acionada toda vez que o FloatActionButton da opção
+     * de fazer uma pesquisa de pokemons é ativado. Aqui, bottomSearchFragment
+     * é aberto.
+     */
     private fun searchDialog() {
-        val bottomSearchFragment = BottomSearchFragment()
-        bottomSearchFragment.show(supportFragmentManager, "TAG")
+        val bottomSearchFragment = SearchFragment()
+        bottomSearchFragment.show(supportFragmentManager, "bottomSearchFragment")
     }
 
 
+    /**
+     * Função direcionada para abrir o menu com os FloatActionButtons da HomePage
+     */
     private fun onMenuButtonClicked() {
         setVisibility(clicked)
         setAnimation(clicked)
@@ -99,6 +142,9 @@ class HomeActivity : AppCompatActivity() {
         clicked = !clicked
     }
 
+    /**
+     * Verifica se deve deixar visivel ou invisivel os botões do menu
+     */
     private fun setVisibility(clicked: Boolean) {
         if(!clicked){
             btnSearch.visibility = View.VISIBLE
@@ -118,6 +164,9 @@ class HomeActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * Verifica se deve usar a animação de fromBtn ou toBtn
+     */
     private fun setAnimation(clicked: Boolean) {
         if (!clicked) {
             btnSearch.startAnimation(fromBtn)
@@ -138,6 +187,9 @@ class HomeActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * Verifica se deve deixar os botões de menu clicaveis ou não
+     */
     private fun setClickable(clicked: Boolean) {
         if(!clicked) {
             btnSearch.isClickable = true

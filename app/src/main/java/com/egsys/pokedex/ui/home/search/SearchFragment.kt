@@ -11,7 +11,7 @@ import com.egsys.pokedex.ui.details.DetailsActivity
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import kotlinx.android.synthetic.main.fragment_bottom_sheet_search.view.*
 
-class BottomSearchFragment(): BottomSheetDialogFragment() {
+class SearchFragment(): BottomSheetDialogFragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,

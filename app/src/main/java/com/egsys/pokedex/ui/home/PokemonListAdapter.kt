@@ -8,6 +8,9 @@ import com.egsys.pokedex.R
 import com.egsys.pokedex.model.api.PokemonResult
 import kotlinx.android.synthetic.main.card_pokemon.view.*
 
+/**
+ * ListAdapter do RecyclerView da HomePage, onde está a lista com todos os pokemons.
+ */
 class PokemonListAdapter (val pokemon: (Int) -> Unit): RecyclerView.Adapter<PokemonListAdapter.SearchViewHolder>() {
 
 

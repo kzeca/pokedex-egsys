@@ -9,21 +9,27 @@ import com.egsys.pokedex.R
 import com.egsys.pokedex.model.api.Types
 import kotlinx.android.synthetic.main.activity_details.*
 
+/**
+ * View da DetailsPage
+ */
 class DetailsActivity : AppCompatActivity() {
 
-    // declarar vm
+    /**
+     * Declara a ViewModel da DetailsPage
+     */
     lateinit var viewModel: DetailsViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_details)
 
-        // inicializar vm
         viewModel = ViewModelProvider(this).get(DetailsViewModel::class.java)
-
         initUi()
     }
 
+    /**
+     * Iniciar a UI da DetailsPage
+     */
     private fun initUi() {
         val poke = intent.extras?.get("pokemon")
 
@@ -45,12 +51,20 @@ class DetailsActivity : AppCompatActivity() {
         setButtons()
     }
 
+    /**
+     * Contem todos os ButtonsListeners
+     */
     private fun setButtons() {
         btnBack.setOnClickListener {
             finish()
         }
     }
 
+    /**
+     * Função que separa os tipos do pokemon
+     * @param typesList
+     * @return pokemonTypes
+     */
     private fun getTypes(typesList: List<Types>): String {
         var pokemonTypes = ""
         for (t in typesList){

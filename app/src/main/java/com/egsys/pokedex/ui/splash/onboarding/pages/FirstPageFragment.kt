@@ -7,6 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import com.egsys.pokedex.R
 
+/**
+ * Primeira tela do onBoarding
+ */
 class FirstPageFragment : Fragment() {
 
     override fun onCreateView(
