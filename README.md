@@ -8,7 +8,8 @@
 </p>
 
 <p align="center">  
-Pokedex é aplicativo Android Nativo de nivelamento de conhecimento feito. Nesse projeto <a href="https://kotlinlang.org/">Kotlin</a>, demonstram-se técnicas de desenvolvimento modernas, como Jetpack Components(ViewModel, LiveData, Navigation), retrofit, Espresso, Animations e outros métodos baseados na arquitetura MVVM.
+Pokedex é aplicativo Android Nativo de nivelamento de conhecimento feito. Nesse projeto <a href="https://kotlinlang.org/">Kotlin</a>, demonstram-se técnicas de desenvolvimento modernas, como Jetpack Components(ViewModel, LiveData, Navigation), retrofit, Espresso, Animations e outros métodos baseados na arquitetura MVVM. <br>
+  Em resumo, é um aplicativo que faz uma listagem de pokemons por meio da https://pokeapi.co/ , assim como filtra-os por tipo e faz pesquisas pelo extenso banco de dados. Além disso, existe a funcionalidade de escolher um pokemon de maneira aleatória e lhe dar as informações básicas dele, como Tipo, Nome, Peso, Altura e seu "Número de listagem". Caso você clique em uns dos pokemons na lista apresentada em home, seus detalhes apareceram para você em outra tela. É bem divertido :)
 </p>
 </br>
 
