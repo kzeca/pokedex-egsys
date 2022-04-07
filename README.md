@@ -76,7 +76,7 @@ PokeAPI disponibiliza a interface com objetos extremamente bem detalhados para s
 # Clone este repositório
 $ git clone https://github.com/kzeca/pokedex-egsys.git
 ```
-### Observação: Documentação do projeto kdoc está na pasta documentation. Lá constam mais informaçõse relacionadas a como o projeto funciona
+### Observação: Documentação do projeto kdoc está na pasta documentation. Lá constam mais informações relacionadas a como o projeto funciona
 
 <br>
 <br>
