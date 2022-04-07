@@ -4,7 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.egsys.pokedex.model.api.PokemonTypesResponse
 import com.egsys.pokedex.model.api.PokemonTypesResult
-import com.egsys.pokedex.service.PokemonApiService
+import com.egsys.pokedex.model.service.PokemonApiService
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

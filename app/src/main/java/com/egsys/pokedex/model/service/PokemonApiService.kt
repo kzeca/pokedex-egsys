@@ -1,4 +1,4 @@
-package com.egsys.pokedex.service
+package com.egsys.pokedex.model.service
 
 import com.egsys.pokedex.model.api.*
 import retrofit2.Call

@@ -2,7 +2,6 @@ package com.egsys.pokedex.ui.home.search
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -22,13 +21,17 @@ class BottomSearchFragment(): BottomSheetDialogFragment() {
 
         var view = inflater.inflate(R.layout.fragment_bottom_sheet_search, container, false)
         var name = view.etSearch
-        var btnSearch = view.btnSearch
+        var btnSearch = view.btnSearchPokemon
 
         btnSearch.setOnClickListener {
             if(name.text.isNotEmpty()){
-                Log.d("ADOLETA", name.text.toString())
-                startActivity(Intent(requireContext(), DetailsActivity::class.java).putExtra("pokemon", name.text.toString().trim()))
-                dismiss()
+                if(name.text.toString().all { it.isLetter() }){
+                    startActivity(Intent(requireContext(), DetailsActivity::class.java).putExtra("pokemon", name.text.toString().trim().lowercase()))
+                    dismiss()
+                }
+                else{
+                    Toast.makeText(context, "Only accepts letters", Toast.LENGTH_LONG).show()
+                }
             }else{
                 Toast.makeText(requireContext(), "Empty input for search Pokemon name", Toast.LENGTH_LONG).show()
             }
