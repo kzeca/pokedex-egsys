@@ -1,4 +1,4 @@
-<h1 align="center">Pokedex-egsys</h1>
+<h1 align="center">Android Pokedex</h1>
 
 <p align="center">
   <a href="https://devlibrary.withgoogle.com/products/android/repos/skydoves-pokedex"><img alt="Google" src="https://skydoves.github.io/badges/google-devlib.svg"/></a><br>
@@ -8,9 +8,9 @@
 </p>
 
 <p align="center">  
-Pokedex é aplicativo Android Nativo de nivelamento de conhecimento feito. Nesse projeto <a href="https://kotlinlang.org/">Kotlin</a>, demonstram-se técnicas de desenvolvimento modernas, como Jetpack Components(ViewModel, LiveData, Navigation), retrofit, Espresso, Animations e outros métodos baseados na arquitetura MVVM.
+Pokedex is a Native Android application developed for knowledge assessment. This <a href="https://kotlinlang.org/">Kotlin</a> project demonstrates modern development techniques such as Jetpack Components (ViewModel, LiveData, Navigation), Retrofit, Espresso, Animations, and other methods based on the MVVM architecture.
 </p>
-<p>Em resumo, é um aplicativo que faz uma listagem de pokemons por meio da https://pokeapi.co/ , assim como filtra-os por tipo e faz pesquisas pelo extenso banco de dados. Além disso, existe a funcionalidade de escolher um pokemon de maneira aleatória e lhe dar as informações básicas dele, como Tipo, Nome, Peso, Altura e seu "Número de listagem". Caso você clique em uns dos pokemons na lista apresentada em home, seus detalhes apareceram para você em outra tela. É bem divertido :)</p>
+<p>In summary, it's an application that lists Pokemon using https://pokeapi.co/, filters them by type, and searches through the extensive database. Additionally, there's a feature to randomly select a Pokemon and display its basic information such as Type, Name, Weight, Height, and its "Listing Number". If you click on one of the Pokemon in the home list, its details will appear on another screen. It's quite fun :)</p>
 </br>
 
 <p align="center">
@@ -18,40 +18,40 @@ Pokedex é aplicativo Android Nativo de nivelamento de conhecimento feito. Nesse
 </p>
 
 ## Download
-Vá para [Releases](https://github.com/skydoves/Pokedex/releases) e baixe o último apk disponível.
+Go to [Releases](https://github.com/skydoves/Pokedex/releases) and download the latest available APK.
 
 <img src="./assets/screenShootSplash.jpg" align="right" width="30%"/>
 
-## Stack aplicadas & Open-source Libraries
+## Applied Stack & Open-source Libraries
 - Minimum SDK level 16
 - [Kotlin](https://kotlinlang.org/) based
 - Jetpack
-  - Lifecycle: Adiciona um observer no lifecyle android e possui funções para lidar com as mudanças de UI nesse ciclo.
-  - ViewModel: Controla data holders e as mudaças que o Lifecycle nota. Permite com que os dados se mantenham quando há mudanças de configuração (ex: Tela rotacionando).
-  -Navigation: Navegação entre fragments e activities.
-- Arquitetura
+  - Lifecycle: Adds an observer to the Android lifecycle and has functions to handle UI changes in this cycle.
+  - ViewModel: Controls data holders and changes that the Lifecycle notices. Allows data to persist when configuration changes occur (e.g., screen rotation).
+  - Navigation: Navigation between fragments and activities.
+- Architecture
   - MVVM (View - ViewModel - Model)
-- Repositório
-    - [Retrofit2](https://github.com/square/retrofit): Construção de REST APIs.
-- [Glide](https://github.com/bumptech/glide), [GlidePalette](https://github.com/florent37/GlidePalette): Carregar as imagens da web
-- Testes
-    - [Espresso](https://developer.android.com/training/testing/espresso): Biblioteca para testes de integração
+- Repository
+    - [Retrofit2](https://github.com/square/retrofit): Building REST APIs.
+- [Glide](https://github.com/bumptech/glide), [GlidePalette](https://github.com/florent37/GlidePalette): Loading images from the web
+- Tests
+    - [Espresso](https://developer.android.com/training/testing/espresso): Library for integration tests
 
-## Amostra das telas
+## Screen Samples
 <img src="./assets/screenShootHome.jpg" width="30%"/>
 <img src="./assets/screenShootDetails.jpg" width="30%"/>
 <img src="./assets/screenShootDarkMode.jpg" width="30%"/>
-<p>(sim, temos até dark theme)</p>
-<p>Caso você queira ter acesso a prototipação das telas, é só clicar <a href="https://www.figma.com/file/sQDa5ZRhr7NfeIIeBBuw1A/Pokedex?node-id=29%3A4">aqui</a>
+<p>(yes, we even have dark theme)</p>
+<p>If you want to access the screen prototyping, just click <a href="https://www.figma.com/file/sQDa5ZRhr7NfeIIeBBuw1A/Pokedex?node-id=29%3A4">here</a>
 
-## Diagramas
-- De Caso de Uso: 
+## Diagrams
+- Use Case: 
 ![useCase](./assets/userCaseDiagram.png)
 <br>
-  - De Atividade: <a href="https://drive.google.com/file/d/1ZvfoPvWFJKk12Gt8XKiEaiKoV7kpDnta/view?usp=sharing">Link</a>
+  - Activity: <a href="https://drive.google.com/file/d/1ZvfoPvWFJKk12Gt8XKiEaiKoV7kpDnta/view?usp=sharing">Link</a>
 
 ## Architecture
-Pokedex-egsys é baseado na arquitetura MVVM. Segue o padrão:
+Pokedex-egsys is based on the MVVM architecture. It follows the pattern:
 
 ![architecture](./assets/MVVM.png)
 
@@ -59,10 +59,10 @@ Pokedex-egsys é baseado na arquitetura MVVM. Segue o padrão:
 
 <img src="https://user-images.githubusercontent.com/24237865/83422649-d1b1d980-a464-11ea-8c91-a24fdf89cd6b.png" align="right" width="21%"/>
 
-Pokedex-egsys está usando a [PokeAPI](https://pokeapi.co/) para construir RESTFul API.<br>
-PokeAPI disponibiliza a interface com objetos extremamente bem detalhados para serem construidos com pokemons de todos os jeitos, tipos e formas.
+Pokedex-egsys uses the [PokeAPI](https://pokeapi.co/) to build RESTful API.<br>
+PokeAPI provides an interface with extremely well-detailed objects to be built with Pokemon of all ways, types, and forms.
 
-# Teste você
+# Test it yourself
 
 ## Requirements
 - Android Studio
@@ -70,13 +70,13 @@ PokeAPI disponibiliza a interface com objetos extremamente bem detalhados para s
 - Contentful CLI
 - Android build tools
 - An Android phone 5.0 and up
-## Baixando o projeto
+## Downloading the project
 
 ```bash
-# Clone este repositório
+# Clone this repository
 $ git clone https://github.com/kzeca/pokedex-egsys.git
 ```
-### Observação: Documentação do projeto kdoc está na pasta documentation. Lá constam mais informações relacionadas a como o projeto funciona
+### Note: Project KDoc documentation is in the documentation folder. There you will find more information related to how the project works
 
 <br>
 <br>
@@ -104,5 +104,4 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
 ```
